@@ -22,7 +22,10 @@ const Layout = ({ children }) => {
           <Typography>Sheen Jewelry</Typography>
         </Toolbar>
       </AppBar>
-      <Container>{children}</Container>
+      <Container className={classes.main}>{children}</Container>
+      <footer>
+        <Typography>All Rights Reserved. Sheen Jewelry</Typography>
+      </footer>
     </div>
   );
 };
