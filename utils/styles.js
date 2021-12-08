@@ -9,7 +9,10 @@ const useStyles = makeStyles({
     },
   },
   main: {
-    minHeight: "80vh",
+    minHeight: "85vh",
+  },
+  footer: {
+    textAlign: "center",
   },
 });
 
