@@ -7,13 +7,17 @@ import {
   Typography,
 } from "@mui/material";
 
+import useStyles from "../utils/styles";
+
 const Layout = ({ children }) => {
+  const classes = useStyles();
+
   return (
     <div>
       <Head>
         <title>Sheen Jewelry</title>
       </Head>
-      <AppBar position="static">
+      <AppBar className={classes.navbar} position="static">
         <Toolbar>
           <Typography>Sheen Jewelry</Typography>
         </Toolbar>
