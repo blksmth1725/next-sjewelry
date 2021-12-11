@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { Button, Link, Grid } from "@mui/material";
+import { Button, Link, Grid, List, ListItem } from "@mui/material";
 import NextLink from "next/link";
 import data from "../../utils/data";
 import Layout from "../../components/Layout";
@@ -38,6 +38,14 @@ const ProductScreen = () => {
             height={640}
             layout="responsive"
           ></Image>
+        </Grid>
+        <Grid>
+          <List>
+            <ListItem>Category: {product.category}</ListItem>
+            <ListItem>Brand: {product.brand}</ListItem>
+            <ListItem>Rating: {product.rating}</ListItem>
+            <ListItem>Description: {product.description}</ListItem>
+          </List>
         </Grid>
       </Grid>
     </Layout>
