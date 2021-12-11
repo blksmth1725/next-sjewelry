@@ -1,6 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { Link } from "@mui/material";
+import NextLink from "next/link";
 import data from "../../utils/data";
+import Layout from "../../components/Layout";
 
 const ProductScreen = () => {
   const router = useRouter();
@@ -11,7 +14,15 @@ const ProductScreen = () => {
     return <div>Product Not Found</div>;
   }
 
-  return <h1>{product.name}</h1>;
+  return (
+    <Layout title={product.name}>
+      <div>
+        <NextLink href="/" passHref>
+          <Link>Back to products page</Link>
+        </NextLink>
+      </div>
+    </Layout>
+  );
 };
 
 export default ProductScreen;

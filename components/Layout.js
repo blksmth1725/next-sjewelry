@@ -11,13 +11,15 @@ import {
 
 import useStyles from "../utils/styles";
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
   const classes = useStyles();
 
   return (
     <div>
       <Head>
-        <title>Sheen Jewelry</title>
+        <title>
+          {title ? `${title} - Sheen Jewelry` : "Sheen Jewelry"}
+        </title>
       </Head>
       <AppBar className={classes.navbar} position="static">
         <Toolbar>
