@@ -1,12 +1,12 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Button, Link } from "@mui/material";
+import Image from "next/image";
+import { Button, Link, Grid } from "@mui/material";
 import NextLink from "next/link";
 import data from "../../utils/data";
 import Layout from "../../components/Layout";
 
 import useStyles from "../../utils/styles";
-import { color } from "@mui/system";
 
 const ProductScreen = () => {
   const router = useRouter();
@@ -29,6 +29,17 @@ const ProductScreen = () => {
           </Button>
         </NextLink>
       </div>
+      <Grid container spacing={1}>
+        <Grid item md={6} xs={12}>
+          <Image
+            src={product.image}
+            alt={product.name}
+            width={640}
+            height={640}
+            layout="responsive"
+          ></Image>
+        </Grid>
+      </Grid>
     </Layout>
   );
 };
