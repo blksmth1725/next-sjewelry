@@ -49,10 +49,26 @@ const ProductScreen = () => {
         </Grid>
         <Grid>
           <List>
-            <ListItem>Category: {product.category}</ListItem>
-            <ListItem>Brand: {product.brand}</ListItem>
-            <ListItem>Rating: {product.rating}</ListItem>
-            <ListItem>Description: {product.description}</ListItem>
+            <ListItem>
+              <Typography component="h1" variant="h1">
+                {product.name}
+              </Typography>
+            </ListItem>
+            <ListItem>
+              <Typography></Typography>
+              Category: {product.category}
+            </ListItem>
+            <ListItem>
+              <Typography>Brand: {product.brand}</Typography>
+            </ListItem>
+            <ListItem>
+              <Typography>Rating: {product.rating}</Typography>
+            </ListItem>
+            <ListItem>
+              <Typography>
+                Description: {product.description}
+              </Typography>
+            </ListItem>
           </List>
         </Grid>
         <Grid item md={3} xs={12}>
