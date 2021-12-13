@@ -27,7 +27,7 @@ const ProductScreen = () => {
   }
 
   return (
-    <Layout title={product.name}>
+    <Layout title={product.name} description={product.description}>
       <div className={classes.section}>
         <NextLink href="/" passHref>
           <Button variant="contained" sx={{ background: "#203040" }}>
@@ -55,7 +55,7 @@ const ProductScreen = () => {
             <ListItem>Description: {product.description}</ListItem>
           </List>
         </Grid>
-        <Grid>
+        <Grid item md={3} xs={12}>
           <Card>
             <List>
               <ListItem>
@@ -64,9 +64,28 @@ const ProductScreen = () => {
                     <Typography>Price</Typography>
                   </Grid>
                   <Grid item xs={6}>
-                    <Typography>$ {product.price}</Typography>
+                    <Typography>${product.price}</Typography>
                   </Grid>
                 </Grid>
+              </ListItem>
+              <ListItem>
+                <Grid container>
+                  <Grid item xs={6}>
+                    <Typography>Status</Typography>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Typography>
+                      {product.countInStock > 0
+                        ? "In stock"
+                        : "Unavailable"}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </ListItem>
+              <ListItem>
+                <Button fullWidth variant="contained" color="primary">
+                  Add to cart
+                </Button>
               </ListItem>
             </List>
           </Card>

@@ -11,7 +11,7 @@ import {
 
 import useStyles from "../utils/styles";
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, children, description }) => {
   const classes = useStyles();
 
   return (
@@ -20,6 +20,9 @@ const Layout = ({ title, children }) => {
         <title>
           {title ? `${title} - Sheen Jewelry` : "Sheen Jewelry"}
         </title>
+        {description && (
+          <meta name="decription" content={description}></meta>
+        )}
       </Head>
       <AppBar className={classes.navbar} position="static">
         <Toolbar>
